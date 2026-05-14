@@ -1,0 +1,36 @@
+services:
+  # Banco de Dados
+  database:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-app}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+    volumes:
+      - database_data:/var/lib/postgresql/data:rw
+
+  # Backend Symfony
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: "postgresql://${POSTGRES_USER:-app}:${POSTGRES_PASSWORD:-!ChangeMe!}@database:5432/${POSTGRES_DB:-app}?serverVersion=16&charset=utf8"
+      APP_SECRET: ${APP_SECRET:-67d34d1d9904945484826189910e980c}
+    ports:
+      - "8000:80"
+    depends_on:
+      - database
+    volumes:
+      - ./public/uploads:/app/public/uploads
+
+  # Notification Hub (Node.js)
+  notification-hub:
+    build:
+      context: ./notification-hub
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+volumes:
+  database_data:

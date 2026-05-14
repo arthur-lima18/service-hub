@@ -1,0 +1,27 @@
+# Ignorar dependências em QUALQUER nível
+**/node_modules/
+**/vendor/
+**/target/
+
+# Symfony específico
+/service-hub/var/
+/service-hub/.env.local
+/service-hub/.env.local.php
+/service-hub/.env.test.local
+/service-hub/public/bundles/
+/service-hub/public/uploads/
+/service-hub/config/secrets/prod/prod.decrypt.private.php
+
+# Java específico
+.mvn/wrapper/maven-wrapper.jar
+**/.idea/
+**/.vscode/
+**/*.iml
+
+# Remover o Hub Node que não estamos mais usando
+/service-hub/notification-hub/
+
+# Diversos
+.eslintcache
+.DS_Store
+Thumbs.db

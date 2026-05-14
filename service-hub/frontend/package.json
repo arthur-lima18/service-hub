@@ -1,0 +1,23 @@
+{
+  "name": "service-hub-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.16.1",
+    "lucide-vue-next": "^1.0.0",
+    "pinia": "^3.0.4",
+    "sockjs-client": "^1.6.1",
+    "vue": "^3.3.4",
+    "vue-router": "^5.0.7",
+    "webstomp-client": "^1.2.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.5"
+  }
+}
