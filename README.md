@@ -84,7 +84,7 @@ O projeto utiliza um `Makefile` para facilitar a inicialização de todos os ser
 
 Este projeto ainda está em desenvolvimento. Com isso, criei um checklist de funcionalidades que pretendo implementar:
 
-### 🎨 Frontend (Prioridade)
+### 🎨 Frontend
 - [ ] **Formulário de Abertura de Ticket**: Interface amigável para o usuário criar novos chamados sem usar a API.
 - [ ] **Filtros Avançados**: Filtragem por pessoa atribuída,intervalo de datas e status múltiplos.
 - [ ] **Dashboard com Gráficos**: Visualização de métricas (ex: tickets resolvidos vs abertos) usando Chart.js ou D3.js.
