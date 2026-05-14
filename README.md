@@ -79,4 +79,27 @@ O projeto utiliza um `Makefile` para facilitar a inicialização de todos os ser
 - [x] Notificações push (Toasts) automáticas.
 
 ---
+
+## 🗺️ Roadmap de Desenvolvimento
+
+Este projeto ainda está em desenvolvimento. Com isso, criei um checklist de funcionalidades que pretendo implementar:
+
+### 🎨 Frontend (Prioridade)
+- [ ] **Formulário de Abertura de Ticket**: Interface amigável para o usuário criar novos chamados sem usar a API.
+- [ ] **Filtros Avançados**: Filtragem por pessoa atribuída,intervalo de datas e status múltiplos.
+- [ ] **Dashboard com Gráficos**: Visualização de métricas (ex: tickets resolvidos vs abertos) usando Chart.js ou D3.js.
+- [ ] **Perfil do Usuário**: Página para o usuário alterar nome, senha e avatar.
+- [ ] **Feedback Visual**: Implementar uma biblioteca de "Toasts" mais robusta (ex: Vue-Toastification).
+
+### ⚙️ Backend
+- [ ] **Notificações por E-mail**: Disparo automático de e-mails quando um ticket é fechado ou atribuído.
+- [ ] **Storage em Nuvem**: Mudar o upload de arquivos de local para AWS S3 ou similar.
+- [ ] **Testes de Integração**: Expandir a suíte de testes para cobrir o fluxo de notificações Java.
+
+### 🏗️ Infraestrutura & Segurança
+- [ ] **CI/CD**: Configurar GitHub Actions para rodar testes automáticos a cada push.
+- [ ] **HTTPS/SSL**: Configurar certificados no Docker para conexões seguras.
+- [ ] **Logs Centralizados**: Implementar um sistema de log para monitorar erros em produção.
+
+---
 *Este projeto é uma demonstração de arquitetura full-stack integrada.*
